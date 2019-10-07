@@ -1,14 +1,21 @@
 public class Printer {
 
-    private int noOfSheetsOfPaper;
+    private int noOfSheetsRemaining;
+   private int toner;
 
 
-    public Printer(int noOfSheetsOfPaper){
+    public Printer(int noOfSheetsRemaining){
 
-        this.noOfSheetsOfPaper = noOfSheetsOfPaper;
+        this.noOfSheetsRemaining = noOfSheetsRemaining;
     }
 
     public int getNoOfSheets(){
-        return this.noOfSheetsOfPaper;
+        return this.noOfSheetsRemaining;
     }
+
+
+    public int print(int noOfPagesToPrint, int noOfCopies){
+        return noOfPagesToPrint * noOfCopies;
+    }
+
 }
